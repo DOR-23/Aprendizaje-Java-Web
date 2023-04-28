@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Selectores CSS</title>
+    
+    <style>
+		/* todos los titulos h1 */
+	  h1{ font-size: 4rem; }
+      
+		/* todos los titulos h1 h2 y y3 */
+	  h1,h2,h3{ font-family: "Verdana", sans-serif; }
+      
+		/* el primer parrafo despues del titulo principal*/
+	  h1 p{ border: 1px solid black; }
+      
+		/* todos los parrafos */
+	  p{ font-family: "Cambria", serif; }
+      
+		/* todos los elementos que tengan clase destacado */
+	    .destacado{ 
+        font-style: italic;
+        margin: 30px 100px;
+        color: navy;
+      }
+      
+		/* los parrafos que van despues de uno con clase destacado */
+	  p.destacado + p{color: blue;}
+	  
+		/* todos los elementos que tengan como identificador primero */
+	   #primero{
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      
+	   /* todos los parrafos hijos de article */
+	  article > p{ padding-left: 30px; }
+	  
+	   /* todos los enlaces hijos directos de parrafos dentro de article */
+	  article p > a{ color:red }
+	  
+	   /* todos los parrafos que tengan un id especificado */
+	  p[id]{ color:cadetblue }
+      
+	   /* todos los enlaces de la pagina */
+	   a{
+        text-decoration: none;
+        font-family: 'Calibri', sans-serif;
+      }
+      
+	   /* todos los enlaces de la pagina sobre los que nos pongamos encima con el raton */
+	   a:hover{ text-decoration: underline; }
+      
+	   /* todos los enlaces de la pagina que tengan un atributo download */
+	   a[download]{
+        background: url('download.png') right center no-repeat;
+        padding-right: 20px;
+      }      
+       
+	   /* todas las imagenes de la pagina que tengan especificado el atributo alt, y éste sea "mano"*/
+	  img[alt="mano"]{ width:4%;float: left;margin-right: 10px; }
+    </style>
+    
+  </head>
+  <body>
+    <h1>Selectores CSS<img src="logo-estech.jpg" title="logo" width="4%"/></h1>
+
+    <p id="primero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quaerat voluptas, <a href="#">nesciunt esse </a>nisi nemo. Nihil quos molestias excepturi velit repudiandae a, odit. Excepturi explicabo, dolores assumenda, fugiat qui accusamus.</p>
+
+    <p>Similique nisi incidunt modi reiciendis doloribus, vero, repellat esse nostrum sequi in, soluta obcaecati earum neque, fugit delectus rerum nulla corporis laborum quidem natus inventore harum. Repellat omnis porro dicta.</p>
+
+    <article>
+      <h2>Titular del Article</h2>
+      <p>Quaerat ex architecto provident minus officiis. Voluptate <a href="#">eaque enim nostrum</a> ullam nemo quos? Expedita voluptates, repellendus <span><a href="#">fugiat nesciunt in</a></span>, repudiandae esse. Veniam ducimus ut nemo <a href="#">quia quis</a>. Nam, perferendis, id.</p>
+      <p class="destacado"><img src="hand-right.png" alt="mano" title="señalamos"/>Molestiae sit, reiciendis aperiam assumenda reprehenderit blanditiis harum facilis inventore dignissimos tenetur, iusto impedit quasi tempora recusandae nesciunt consequuntur repudiandae asperiores fugiat vitae? Voluptates natus, rem blanditiis alias! Adipisci, suscipit?</p>
+	  <p>Facilis ut iusto voluptatem suscipit, excepturi optio debitis rerum non ipsam perferendis, provident delectus corporis. Nihil consequuntur quos sint omnis? Iure culpa optio deserunt commodi reiciendis dignissimos iusto sit alias.</p>
+      <section>
+        <h3>Titular del section 1º</h3>
+        <p>Eum soluta facilis exercitationem ipsa explicabo, magnam, cupiditate ex sint culpa veniam <a href="#" download>laborum dolore doloribus</a> nulla quidem harum! Commodi dignissimos eum numquam. Maxime animi, magni debitis fugit quasi, dolore fuga.</p>
+        <p>Nesciunt vitae vel magnam incidunt ipsam neque eum iusto repellat unde dignissimos adipisci, asperiores cupiditate facilis laudantium, fugit perferendis laborum. Reprehenderit animi aliquam id nesciunt assumenda. Soluta ducimus fugit nulla.</p>
+      </section>
+
+      <section>
+        <h3 id="titulo">Titular del section 1º</h3>
+        <p>Dignissimos alias ipsa repellat nulla quas libero sapiente magnam blanditiis omnis, architecto facere, quia! Quibusdam atque, hic nisi repellendus necessitatibus. Quasi non a dolores est dicta. Adipisci voluptatibus, esse obcaecati.</p>
+        <p class="destacado"><img src="hand-right.png" alt="mano" title="señalando"/> illum dicta dolor quae, ea dolorum perferendis quia aspernatur nobis esse, recusandae beatae nihil, voluptatem officia voluptates, quos magnam iure odio nemo magni. Autem, nesciunt ut hic at. Illo.</p>
+        <p>Facilis ut iusto voluptatem suscipit, excepturi optio debitis rerum non ipsam perferendis, provident delectus corporis. Nihil consequuntur quos sint omnis? Iure culpa optio deserunt commodi reiciendis dignissimos iusto sit alias.</p>
+        <p>Nostrum distinctio quod neque sapiente autem repellat unde architecto illum, beatae quae, pariatur modi quasi illo. Tenetur doloribus dignissimos eum sapiente ad! Unde tenetur eius nam est quas, aut quae!</p>
+      </section>
+
+      <section>
+        <h3>RESUMEN</h3>
+        <p>Dignissimos alias ipsa repellat nulla quas libero sapiente magnam blanditiis omnis, architecto facere, quia! Quibusdam atque, hic nisi repellendus necessitatibus. Quasi non a dolores est dicta. Adipisci voluptatibus, esse obcaecati.</p>
+        <ul>
+          <li>uno
+            <ul class="resumen corto">
+              <li>dos</li>
+              <li>dos</li>
+              <li>dos</li>
+            </ul>
+          </li>            
+          <li>uno</li>
+          <li>uno</li>
+        </ul>
+        <p id="segundo">Nostrum distinctio quod neque sapiente autem repellat unde architecto illum, beatae quae, pariatur modi quasi illo. Tenetur doloribus dignissimos eum sapiente ad! Unde tenetur eius nam est quas, aut quae!</p>
+      </section>
+
+    </article>
+
+
+
+  </body>
+</html>

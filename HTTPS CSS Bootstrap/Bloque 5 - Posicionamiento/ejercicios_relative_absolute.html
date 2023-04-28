@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0}
+        div{border:solid; width:150px;height:150px;background-color: red;}
+        div div{width:100px; height:100px; background-color: aqua;}
+        div div div{width:50px; height:50px; background-color: chartreuse;}
+        
+        #caja1{position:relative; top:40px; left:100px; }
+        #caja2{position:relative; left:150px;}
+        #caja2 div{position:relative; left:50px;}
+        #caja3{position:absolute;top:250px;left:40px;background-color: green;}
+        #caja4{position:relative;} /* para que sea origen de un elemento absolute */
+        #caja4 div div{position:absolute; top:60px; left:40px}
+        #caja5{margin-top:100px;}
+
+        /* USO DE Z-INDEX PARA VISUALIZACIÓN CUANDO HAY SOLAPAMIENTOS 
+        - importante que los elementos estén posicionados */
+        #caja2{z-index: 3;}
+        #caja3{z-index: 2;}
+        #caja4{z-index: 1;}
+    </style>
+</head>
+<body>
+    <div id="caja1">1</div>
+    <div id="caja2">2
+        <div>2.1</div>
+    </div>
+    <div id="caja3">3</div>
+    <div id="caja4">4
+        <div>4.1
+            <div>4.1.1</div>
+        </div>
+    </div>
+    <div id="caja5">5</div>
+</body>
+</html>

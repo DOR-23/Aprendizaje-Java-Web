@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{outline:solid}
+
+        /* EJEMPLO USANDO LAS PROPIEDADES DEL CONTAINER FLEX (PADRE) */
+
+        .contenedor-flex div{background: red;}
+        .contenedor-flex{
+            height:200px;
+            /* le aplica flex al contenedor */
+            display: flex;
+            
+            /* dirección eje principal */
+            flex-direction: row;
+            /* más de 1 línea/columna o no */
+            flex-wrap: wrap;
+            /* shorthand de direction y wrap */
+            flex-flow: row wrap;
+
+            /* alineamiento en eje principal */
+            justify-content: space-around;
+
+            /* alineamiento en eje secundario */
+            align-items:center;
+
+            /* alineamientos de lineas cuando hay espacio
+            libre en el secondary axis - sólo si hay más de 1 línea */
+            align-content: flex-end;
+
+       }
+
+       /* EJEMPLO - TEXTO CENTRADO EN HORIZONTAL Y VERTICAL */
+       .container-flex{
+        width:200px; height:200px; 
+        display: flex;
+        /* flex-flow: row wrap; */
+        justify-content: center;
+        align-items: center;
+        }
+
+        /* USANDO LAS PROPIEDADES DE FLEX ITEMS (HIJOS) */  
+        .cont-flex{
+            height:100px;
+            display:flex;
+            align-items: center;
+            align-content: center;
+            /* espacio entre flex items */
+            gap:10px;
+        } 
+        #item1{
+            /* orden del elemento */
+            order:0;
+            /* si sobra espacio, peso para repartirlo */
+            flex-grow: 1;
+            /* capacidad para encogerse si falta espacio */
+            flex-shrink: 5;
+            /* tamaño por defecto antes de que se reparta espacio sobrante */
+            flex-basis: 2;
+        }
+        #item2{
+            /* orden del elemento */
+            order:1;
+            /* si sobra espacio, peso para repartirlo */
+            flex-grow: 8;
+            /* tamaño por defecto antes de que se reparta espacio sobrante */
+            flex-basis: 3;
+
+            /* alienamiento individual del item */
+            align-self: flex-end;
+        }
+        #item3{
+            /* orden del elemento */
+            order:2;
+            /* si sobra espacio, peso para repartirlo */
+            flex-grow: 4;
+            /* tamaño por defecto antes de que se reparta espacio sobrante */
+            flex-basis: 4;
+            /* propiedad shorthand flex (grow,shrink, basis) */
+            flex:2 2 300px;
+        }     
+
+    </style>
+</head>
+<body>
+    <div class="contenedor-flex">
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="container-flex">
+        <div>texto centrado</div>
+    </div>
+    <br/><br/><br/><br/>
+    
+    <div class="cont-flex">
+        <div id="item1">elemento 1</div>
+        <div id="item2">elemento 2</div>
+        <div id="item3">elemento 3</div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        /* Todos los elementos de la pagina */
+        *{}
+        /* Todos los párrafos de la pagina */
+        p{}
+        /* Todos los párrafos contenidos en #primero */
+        #primero p{}
+        /* Todos los enlaces de la pagina */
+        a{}
+        /* Los elementos "em" contenidos en #primero */
+        #primero em{}
+        /* Todos los elementos "em" de clase "especial" en toda la pagina */ 
+        em.especial{}
+        /* Elementos "span" contenidos en .normal */
+        .normal span{}
+        
+        /* span de id "ttt" contenido en p de clase "ddd" que esté a su vez
+        dentro de cualquier elemento que esté dentro de un div de clase "xxx".*/ 
+        div.xxx * p.ddd span#ttt {}
+
+        /* Elemento de clase rojo contenidos en p con id "alto" a su vez 
+        contenidos en h4 de clase a y clase b*/
+        h4.a.b p#alto .rojo{color:red}
+
+    </style>
+</head>
+<body>
+        <div id="primero">
+		<p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing
+		elit</a>. Praesent blandit nibh at felis., <em>lorem sem aliquam
+		nulla</em>, id
+		lacinia velit mi vestibulum enim.</p>
+    </div>
+    <div class="normal">
+		<p>Phasellus eu velit sed lorem sodales egestas. Ut feugiat. <span><a
+		href="#">Donec porttitor</a>, magna eu varius luctus,</span> metus
+		massa tristique massa, in imperdiet est velit vel magna. <a
+		href="#">Maecenas dictum</a>, nibh vitae pellentesque auctor, tellus velit
+		consectetuer tellus, tempor pretium felis tellus at metus.</p>
+		<p>Cum sociis natoque <em class="especial">penatibus et magnis</em>
+		dis parturient Duis justo.</p>
+		<p>Donec facilisis blandit velit. Vestibulum nisi. Proin volutpat, <em
+		class="especial">enim id iaculis congue</em>, orci justo ultrices tortor, <a
+		href="#">quis lacinia eros libero in eros</a>. Sed
+		Integer at eros.</p>
+    </div>
+</body>
+</html>

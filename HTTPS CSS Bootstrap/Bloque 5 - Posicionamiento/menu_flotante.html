@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #menu ul{margin:0;padding:0;list-style:none;}
+        #menu ul li{background-color: #2e518b;}
+        /* hacemos que el a sea un elemento de bloque */
+        #menu ul li a{
+            color:white;text-decoration: none; font-weight: 800;font-size:15px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-transform: uppercase; letter-spacing: 1px; padding:10px; display:block;
+        }
+        /* flotamos para tener el menú en horizontal y posicionamos para ser 
+        referencia de la ul posicionado absoluta que contiene  */
+        #menu ul li{float:left; margin:0; padding:0;position: relative;}
+        /* pseudo estado hover, cuando pasamos el ratón por encima del li */
+        #menu ul li:hover{background:#5b78a7;}
+     
+        #menu ul ul{display:none;position:absolute;top:100%;left:0;}
+        #menu ul ul li{float: none; width:150px;}
+        #menu ul ul li a{line-height: 120%; padding:10px 15px}
+
+        /* cuando el ratón pasa sobre el li (y está en pseudo-estado hover)
+        el ul que lleva dentro se visualiza */
+        #menu ul li:hover ul{display: block;}
+
+        /* sub sub lista */
+        #menu ul ul ul{
+            display: none;
+            position:absolute;top:0; 
+            left:100%;width:500px;
+        }
+        #menu ul ul ul li{float:left;}
+        /* juego para no mostrar la subsublista con el hover de la lista padre */
+        #menu ul li:hover ul ul{display: none;}
+        /* con hover de sublista, mostrar subsublista */
+        #menu ul ul li:hover ul{display: block;}
+    </style>
+</head>
+<body>
+    <h1>MENÚ FLOTANTE</h1>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Enlace 1</a></li>
+            <li><a href="#">Enlace 2</a>
+                <ul>
+                    <li><a href="#">Enlace 2.1</a></li>
+                    <li><a href="#">Enlace 2.2</a></li>
+                    <li><a href="#">Enlace 2.3</a>
+                        <ul>
+                            <li><a href="#">Enlace 2.3.1</a></li>
+                            <li><a href="#">Enlace 2.3.2</a></li>
+                            <li><a href="#">Enlace 2.3.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Enlace 3</a>
+                <ul>
+                    <li><a href="#">Enlace 2.1</a></li>
+                    <li><a href="#">Enlace 2.2</a></li>
+                    <li><a href="#">Enlace 2.3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Enlace 4</a></li>
+            <li><a href="#">Enlace 5</a>
+                <ul>
+                    <li><a href="#">Enlace 2.1</a></li>
+                    <li><a href="#">Enlace 2.2</a></li>
+                    <li><a href="#">Enlace 2.3</a>
+                        <ul>
+                            <li><a href="#">Enlace 2.3.1</a></li>
+                            <li><a href="#">Enlace 2.3.2</a></li>
+                            <li><a href="#">Enlace 2.3.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* EJEMPLO 1 */
+.grid-pagina{
+  display:grid;
+  grid-template-rows: auto auto 200px auto;
+  grid-template-columns:repeat(4,auto);
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+}
+.grid-pagina >div{
+  border: 1px solid black;
+  background: aliceblue;
+  text-align: center;
+}
+.header{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.content{
+  grid-column: 2/ span 3;
+}
+.pie{
+  grid-column: 1/ span 4
+}
+
+/* EJEMPLO 2 */
+.grid-container {
+            display: grid;
+            grid-template:
+               '. . .'
+               '. . .'
+               '. . .'
+               'pie pie pie'
+                /1fr 2fr 2fr;
+            grid-gap: 5px;
+            background-color: #2AB109;
+            padding: 5px;
+        }
+        .grid-container >div{
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .item2{ grid-column: 2 /span 2; }
+        .item9 {grid-area:pie}
+        
+/* EJEMPLO 3 */
+.container-grid{
+ display: grid;
+ grid-template-areas:
+"cabecera cabecera cabecera cabecera"
+"izquierda contenido contenido derecha"
+"pie pie pie pie";
+justify-items: stretch;
+text-align: center;
+}
+.cabecera{
+ grid-area: cabecera;
+ height: 50px;
+ background: red;
+}
+.izquierda{
+ grid-area: izquierda;
+ background: yellow;
+}
+.contenido{
+ grid-area: contenido;
+ height: 200px;
+ background: gray;
+}
+.derecha{
+ grid-area: derecha;
+ background: blue;
+}
+.elpie{
+ grid-area: pie;
+ height: 100px;
+ background: green;
+}
+</style>
+
+<body>
+    
+    <div class="grid-pagina">
+        <div class="header">cabecera</div>
+        <div class="nav">navs</div>
+        <div class="nav">navs</div>
+        <div class="nav">navs</div>
+        <div class="nav">navs</div>
+        <div class="indices">indice</div>
+        <div class="content">content</div>
+        <div class="pie">el pie</div>
+    </div>
+    <br/>
+    <div class="container-grid">
+        <div class="item cabecera">Header</div>
+        <div class="item izquierda">Izquierda</div>
+        <div class="item contenido">Contenido</div>
+        <div class="item derecha">Derecha</div>
+        <div class="item elpie">Footer</div>
+    </div>
+    <br/>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">contenido</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">Area pie</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* ESTO ES UN COMENTARIO */
+
+        /* SELECTOR UNIVERSAL */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* SELECTOR DE ETIQUETA */
+        h1 {
+            color: purple;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+
+        /* UNA MISMA REGLA PARA VARIOS ELEMENTOS (SELECTORES) */
+        p,
+        span {
+            font-family: Verdana;
+        }
+
+        /* SELECTORES DESCENDENTES */
+        /* se aplica sólo a los span que estén dentro de un p */
+        p span {
+            background-color: aqua;
+        }
+
+        p span strong {
+            color: yellow
+        }
+
+        h4 span strong em {
+            color: green;
+        }
+
+        h4 em {
+            color: red;
+        }
+
+        /* SELECTORES DE CLASE */
+        /* todos los elementos con clase = impar */
+        .impar {
+            background-color: brown;
+        }
+
+        /* los divs con clase impar o par */
+        div.impar {
+            border: solid;
+            background-color: red;
+        }
+
+        div.par {
+            border: solid;
+            background-color: olive;
+        }
+
+        /* todos los divs de clase par que estén dentro de un h4 */
+        h4 div.par {}
+
+        /* todos los strong de class titular, que estén dentro de un span
+        que a su vez esté dentro de un p */
+        p span strong.titular {}
+
+        /* todos los elementos de class = aviso, que estén dentro de 
+        cualquier elemento, que a su vez esté dentro de un p */
+        p * .aviso {}
+
+        /* todos los elementos de class = zzz, que estén dentro de 
+        cualquier elemento, que a su vez esté dentro de un h4 */
+        h4 * .zzz {
+            background-color: blue;
+        }
+
+        /* clases */
+        .aviso {
+            color: blue;
+        }
+
+        .error {
+            font-size: 40px;
+        }
+
+        /* los elementos que sean de clase aviso y clase error */
+        .aviso.error {
+            text-transform: uppercase;
+        }
+
+        /* SELECTORES DE ID */
+        #menu {font-size: 50px;}
+        #titular1 {text-transform: uppercase;}
+
+        /* COMBINACIONES DE SELECTORES */
+        ul#menuPrincipal li.destacado a#inicio { color:seagreen  }
+    </style>
+</head>
+
+<body>
+    <p class="impar">un párrafo <strong>otro</strong></p>
+    <!-- un elemento con más de una clase -->
+    <span class="aviso">el span</span>
+    <span class="error">el span</span>
+    <span class="aviso error">el span</span>
+    <h1>titulo</h1>
+    <p>un párrafo con un <span>SPAN <strong>muy</strong> chulo</span> dentro</p>
+
+    <p>1
+    <h4>2
+        <span>2
+            <strong>4
+                <em>5</em>
+            </strong>
+        </span>
+    </h4>
+    </p>
+    <em>adfs</em>
+
+    <div class="impar">div 1</div>
+    <div class="par">div 2</div>
+    <div class="impar">div 3</div>
+    <div class="par">div 4</div>
+
+    <h4>
+        <span>
+            <em class="zzz">
+                algo
+            </em>
+        </span>
+        <span class="zzz">
+            algo
+        </span>
+    </h4>
+
+    <h1 id="menu">soy el menu</h1>
+    <h1 id="titular1">soy el titular</h1>
+
+    
+    <ul id="menuPrincipal">
+        <li class="destacado">
+            <a id="inicio">enlace</a>
+        </li>
+    </ul>
+</body>
+
+</html>

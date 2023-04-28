@@ -1,0 +1,4 @@
+Escribiendo en miarchivo.txt desde mi aplicaciÃ³n Java
+Segunda escritura
+Tercera escritura
+Cuarta escritura

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio Practico Flex</title>
+    <style type="text/css">
+        *{}
+        header{
+            text-align: center;
+            border-bottom: solid slategray 1px;
+
+        }
+
+        #contenedor_principal{
+            padding: 10px; 
+            margin: 10px;
+        }
+
+        #primero{
+            display: flex;
+            
+        }
+        section figure{
+            border: solid 1px gray;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #segundo{
+            display: flex;
+           
+            
+        }
+
+        nav ul li{
+            margin-top: 10px;
+            
+        }
+
+        footer{
+            border-top: solid 1px;
+            display: flex;
+            justify-content: space-around;
+            
+            align-items: center; 
+            
+        }
+        footer h2{
+            font-size: small;
+            padding-left: 
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="contenedor_principal">
+
+        <header>
+            <h1> Ejemplo de Maquetación con Flex </h1>
+        </header>
+
+        <main class="todo">
+
+            <section id="primero">
+
+                <nav>
+                    <ul>
+                        <li> Inicio </li>
+                        <li> Galeria </li>
+                        <li> Productos </li>
+                        <li> Clientes </li>
+                        <li> Sobre nosotros </li>
+                        <li> Contacto </li>
+                    </ul>
+                </nav>
+
+                <figure id="importante">
+                    <img src="../../Bloque 3 - Enlaces listas imagenes/imagenes/imagen2.jpeg">
+                    <figcaption> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet volutpat
+                                lacus. Phasellus et posuere tortor. Fusce id molestie diam, vitae tincidunt elit. Nunc sit amet volutpat
+                                lacus.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../../Bloque 3 - Enlaces listas imagenes/imagenes/imagen1.jpeg">
+                    <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                </figure>
+
+            </section>
+
+            <section id="segundo">
+
+                    <figure>
+                        <img src="img/img3.jpg">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/img4.jpg">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/img5.jpg">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <p> C/Principal<br>
+                Linares </p>
+
+            <h2>Todas las fotos realizadas por @pekechis bajo la licencia CC BY-SA</h2>
+
+            <main id="imagenes">
+
+                <img src="img/snapchat.jpg">
+                <img src="img/facebook.jpg">
+                <img src="img/twitter.jpg">
+
+            </main>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

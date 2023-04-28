@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0; outline: solid;}
+        .soyflex{
+            display: flex;
+            flex-flow: column;
+            height:1000px; 
+        }
+        #head{background: red; flex-basis:20%;}
+        #cuerpo{background: blue;flex-basis:70%; }
+        #pie{background: green;flex-basis:10%}
+
+        .subflex{
+            display:flex;
+            align-items:stretch;
+            height:100%;
+        }
+        .subflex div:nth-of-type(1){flex-basis:20%;background:pink;}
+        .subflex div:nth-of-type(2){flex-basis:60%;background: yellow;}
+        .subflex div:nth-of-type(3){flex-basis:20%;background:rebeccapurple}
+    </style>
+</head>
+<body>
+    <div class="soyflex">
+        <div id="head">CABECERA</div>
+        <div id="cuerpo">
+            
+            <div class="subflex">
+                <div>LAT</div>
+                <div>MAIN</div>
+                <div>LAT2</div>
+            </div>
+            
+        </div>
+        <div id="pie">PIE</div>
+    </div>
+    
+</body>
+</html>

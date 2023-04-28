@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        ul,ol {border: solid;}
+        li{background-color: lightgreen;}
+        ol li{background-color: brown;}
+        ul#lista_tuneada, ul#lista_tuneada li{background-color: transparent;}
+        
+        ul{list-style-type:square}
+        ol{list-style-type: lower-latin;}
+        ol{list-style-position: inside;}
+        ul#lista_tuneada ol{list-style-type: decimal;}
+    </style>
+</head>
+<body>
+    <!--LISTAS NO ORDENADAS UL-->
+    Esto es una lista
+    <ul>
+        <li>elemento1</li>
+        <li>elemento2</li>
+        <li>elemento3</li>
+        <li>elemento4</li>
+    </ul>
+
+    esto es un menú de enlaces de navegación
+    <ul>
+        <li>
+            <a href="">elemento1 </a>
+        </li>
+        <li>elemento2</li>
+        <li>elemento3</li>
+        <li>elemento4</li>
+    </ul>
+
+    <!--LISTAS ORDENADAS-->
+    Idiomas varios
+    <OL>
+        <li>inglés</li>
+        <li>francés</li>
+        <li>italiano</li>
+    </OL>
+
+    <!--SUB LISTAS-->
+    <ol>
+        <li>Menú 1</li>
+        <li>Menú 2</li>
+            <ul>
+                <li>entrantes</li>
+                <li>principal</li>
+                <li>postre</li>
+            </ul>
+        <li>Menú 3</li>
+        <li>Menú 4</li>
+    </ol>
+
+    <h2>Menú</h2>
+    <ul id="lista_tuneada">
+        <li>inicio</li>
+        <li>
+            <strong>Noticias</strong>
+            <ul>
+                <li><a href="#">Recientes</a></li>
+                <li><a href="#"><strong>Más leidas</strong></a></li>
+                <li><a href="#">Más valoradas</a></li>
+            </ul>
+            <li>
+                <strong>Artículos</strong>
+                <ol>
+                    <li><strong>XHTML</strong></li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>otros</li>
+                </ol>
+            </li>
+            <li><strong>Contacto</strong>
+                <dl>
+                    <dt><em>EMAIL</em></dt>
+                    <dd><strong>nombre@fireccion.com</strong></dd>
+                </dl>
+                <dl>
+                    <dt><em>Teléfono</em></dt>
+                    <dd>854557845845</dd>
+                </dl>
+            </li>
+
+        </li>
+    </ul>
+
+    <dl>
+        <dt>termino</dt>
+        <dd>descripción</dd>
+    </dl>
+
+</body>
+</html>

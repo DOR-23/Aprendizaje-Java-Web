@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios básicos</title>
+    <style type="text/css">
+        form#formulario_registro{background: gold;}
+        form#formulario_registro label{font:500 11px Arial; text-shadow: black 1px 1px 4px; }
+        form#formulario_registro input[type=submit] {background: red; margin-left:40px;}
+        
+        /* cambio de estética si campo no validado usando la pseudoclase invalid */
+        input:valid{}
+        input:invalid{border:solid red; background-color: salmon;}
+    </style>
+</head>
+<body>
+    <!-- action: url a donde envio la info
+    method: método de envío (get o post)
+    enctype: tipo de codificación - si hay archivos incluir multipart/form-data
+-->
+    <form id="formulario_registro" method="get" enctype="multipart/form-data" onsubmit="alert('enviado!')">
+
+        <!-- label apunta al id del elemento input que acompaña -->
+        <!-- campo input tipo text: -->
+        <label for="correo">Email:</label> 
+        <input type="text" name="email" id="correo" value="" placeholder="pon tu nombre" size="20"  
+        minlength="8" maxlength="15" required />
+        <br/>
+        
+        <!-- campo input tipo password: se enmascara la info -->
+        <label for="pwd">Password:</label> 
+        <input type="password" name="pass" id="pwd" value="" size="10" maxlength="10"  />
+        <br/><br/>
+
+        <!-- camput input tipo checkbox - opciones no excluyentes, posiblemente independientes entre si-->
+        Idiomas:<br/>
+        <label for="eng">Inglés:</label> <input type="checkbox" name="ingles" id ="eng" value="ingles"/><br/>
+        <label for="fra">Francés:</label> <input type="checkbox" name="frances" id ="fra" value="frances" checked /><br/>
+        <label for="deu">Alemán:</label> <input type="checkbox" name="aleman" id ="deu" value="aleman"/><br/>
+        <br/>
+
+        <!-- campo input tipo radio - opciones excluyentes, relacionadas entre si -->
+        Sexo:<br/>
+        <label for="h">Hombre:</label><input type="radio" name="sexo" id="h" value="hombre" required /><br/>
+        <label for="m">Mujer:</label><input type="radio" name="sexo" id="m" value="mujer" />
+        <br/><br/>
+
+        <!-- campo input tipo submit - para enviar el formulario -->
+        <input type="submit" name="envio" value="Enviar formulario"/><br/>
+
+        <!-- campo input tipo reset - limpia el formulario (vuelve a estado original) -->
+        <input type="reset" name="reseteo" value="Limpiar formulario"/><br/><br/>
+
+        <!-- campo input tipo file - permite envío de archivos -->
+        <label for="archivo">Selecciona un archivo:</label>
+        <input type="file" name="file" id="archivo"/><br/>
+
+        <!-- campo input tipo hidden - campos ocultos -->
+        <input type="hidden" name="campo_oculto" value="soy el valor ocultooooo" />
+
+        <!-- campo input tipo botón - botón genérico para lanzar alguna acción -->
+        <input type="button" name="guardar" value="Guardar los cambios" onclick="alert('ya he guardado, leñe!')"/><br/>
+
+
+        <input type="image" name="imagen" src="favicon-32x32.png" /><br/>
+        <input type="number" name="zzzz" min="0" max="40" step="4" required /> * 
+
+        <!-- opciones de validación: min/maxlength, min, max, required, step, placeholder -->
+        Email: <input type="email" name="email"/><br/>
+
+        DNI: <input type="text" name="dni" pattern="[0-9]{8}[A-Za-z]{1}"/><br/>
+
+        <br/>
+        <!-- ejemplo de un desplegable select con varias options -->
+        <select name="equipo">
+            <optgroup label="1ª división">
+                <option value="value1">opción 1</option>
+                <option value="value2">opción 2</option>
+            </optgroup>
+            <optgroup label="2ª división">
+                <option value="value3">opción 3</option>
+                <option value="value3">opción 3</option>
+                <option value="value3">opción 3</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <label for="comm">Introduce tus comentarios:</label><br/>
+        <textarea name="comentarios" id="comm" rows="10" cols="40" ></textarea>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* 
+A la hora de completar y organizar un archivo CSS, 
+hay varias cosas a tener en cuenta:
+
+- elegir entre
+selector {reglas}
+o
+selecter{
+    reglas
+}
+
+- usar comentarios para indicar bloques de reglas, ya sea por funcionalidad
+o por a qué parte de la web se aplican
+
+- tabulemos con criterio  */
+div{}
+
+    div ul {}
+
+        div ul li{}
+
+/*
+- usemos cierto orden lógico 
+*/
+
+
+/******************** 
+ESTILOS GENERALES 
+*********************/
+*{}
+body{}
+
+h1,h2,h3,h4,h5,h6{}
+
+ul, ol{}
+
+a{text-decoration: none; color:grey;}
+
+.primary-color{}
+.secondary-color{}
+
+
+/******************** 
+UTILIDADES - clases propias
+*********************/
+.destacado{font-weight: 900;}
+.cursiva{font-style: italic ;}
+.subrayado{text-decoration: underline;}
+
+
+/******************** 
+ESTRUCTURA GENERAL - Layout (tamaño y ubicación de los bloques)
+*********************/
+
+
+/* aquí doy estilo a los bloques principales de la página */
+
+
+
+
+/******************** 
+ESTRUCTURA PARTICULAR - para el contenido de los bloques 
+*********************/
+
+/* HEADER */
+#head{}
+#head nav{}
+
+
+/* SECCIÓN PRINCIPAL */
+
+
+
+
+
+/******************** 
+MEDIA QUERIES - Responsive 
+*********************/
+
+
+

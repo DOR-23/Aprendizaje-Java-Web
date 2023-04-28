@@ -1,0 +1,13 @@
+p {
+    text-shadow: black 2px 2px; 
+    border:solid blue;
+    font-family: Cambria; 
+    font-size: large;  
+    color:yellow;
+} 
+
+h1 { 
+    color: red; 
+    font-family: Arial; 
+    font-size: large; 
+}

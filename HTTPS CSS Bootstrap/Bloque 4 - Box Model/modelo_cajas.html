@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /**{outline:dotted;}*/
+        body{background-color:darkkhaki;}
+
+        /* uso de width, height y min-width, max-width */
+        div{background-color: green;width:300px; height:100px;}
+        #blq2{
+            width:60%;min-width:280px; max-width: 400px; 
+            /* uso de margin */
+            /*margin-top:20px;margin-left:40px; margin-right:30px; margin-bottom:30px;*/
+        }
+
+        /* MARGIN - shorthand */
+        /* si hay 4 valores, son los 4 valores de top, right, bottom, left */
+        div{margin: 20px 30px 30px 40px;}
+
+        /* si hay 3 valores, son top, left/right, bottom */
+        div{margin: 20px 30px 40px;}
+
+        /* si hay 2 valores, son top/bottom, left/right */
+        div{margin: 20px 40px;}
+
+        /* si hay 1 valor, es el mismo valor para todos: top, right, bottom, left */
+        div{
+            margin: 20px;
+            margin-left:40px;
+        }
+        
+        /* EJEMPLOS DE PADDING */
+        p{background-color: red; margin:40px}
+        p+p{margin:0; padding:40px}
+
+        section{
+            padding-left:20px;padding-top:20px;padding-bottom:20px;padding-right:20px;
+            text-align: justify; background-color: aqua; 
+            /* propiedad shorthand equivalente */
+            padding: 20px; 
+        }
+
+        /* EJEMPLOS DE BORDES */
+        section{
+            /* border width */
+            border-top-width: 20px;
+            border-right-width: 10px;
+            border-bottom-width: 60px;
+            border-left-width: 30px;
+            /* propiedad shorthand */
+            border-width:20px 10px 60px 30px;
+            
+            /* border color */
+            border-top-color: yellow;
+            border-right-color:blue;
+            border-bottom-color: green;
+            border-left-color: blueviolet;
+            /* propiedad shorthand */
+            border-color: yellow blue green blueviolet;
+            
+            /* border style */
+            border-top-style: solid;
+            border-right-style: dotted;
+            border-bottom-style: double;
+            border-left-style: ridge;
+            /* propiedad shorthand */
+            border-style: solid dotted double ridge;
+
+            /* propiedades shorthand por lateral */
+            border-top: 40px blue inset;
+            border-right: 20px green solid;
+            border-bottom: 10px yellow solid;
+            border-left: 40px brown inset;
+
+            /* propiedad shorthand GLOBAL */
+            border: solid 14px blueviolet;
+            border-bottom-width: 4px;
+
+            /* border-radius */ 
+            border-radius: 15px;
+            border-top-right-radius: 50px;
+            
+            margin-bottom:40px;
+        }
+        aside{
+            width: 200px; height: 200px; background-color: darksalmon; 
+            border: solid 5px darkmagenta;
+            border-radius:100px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>bloque 1</div>
+    <div id="blq2">bloque 2</div>
+    <div id="blq2">bloque 2</div>
+    <div id="blq2">bloque 2</div>
+
+    <p>soy un parrafo cualquiera soy un parrafo cualquiera soy un parrafo 
+        cualquiera soy un parrafo cualquiera soy un parrafo cualquiera 
+        soy un parrafo cualquiera soy un parrafo cualquiera soy un parrafo cualquiera </p>
+
+    <p>soy un parrafo cualquiera soy un parrafo cualquiera soy un parrafo 
+        cualquiera soy un parrafo cualquiera soy un parrafo cualquiera 
+        soy un parrafo cualquiera soy un parrafo cualquiera soy un parrafo cualquiera </p>
+
+    <section>asdfghjk un parrafo cualquiera soy un parrafo cualquiera soy un parrafo 
+        cualquiera soy un parrafo cualquiera soy un parrafo cualquiera 
+        soy un parrafo cua un parrafo cualquiera soy un parrafo cualquiera soy un parrafo 
+        cualquiera soy un parrafo cualquiera soy un parrafo cualquiera 
+        soy un parrafo cual</section>
+
+    <aside>adads</aside>
+
+</body>
+</html>

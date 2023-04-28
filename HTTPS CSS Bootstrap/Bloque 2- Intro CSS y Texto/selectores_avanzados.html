@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        /* descendiente con varios niveles */
+        div p span em{color: blue; border: solid;}
+
+        /* selector hijos directos */
+        div span{color: red;}
+
+        /* selectores adyacentes */
+        h1 + h2{text-decoration: underline;}
+        p + p {text-indent: 40px;}
+
+        /* selectores de atributos */
+        /* div con atributos class */
+        div[class="zapato"]{border: solid;}
+
+        div[class="zapato"]{margin: 40px;}
+
+        /* div con atributo con class que comienza por zapato*/
+        div[class|="zapato"]{padding: 40px;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <span>
+                soy un <span>span</span>
+            </span>
+        </p>
+    </div>
+    <h1>título1</h1>
+    <h2>título2</h2>
+    <h3>título3</h3>
+    <h2>título2</h2>
+</body>
+</html>
